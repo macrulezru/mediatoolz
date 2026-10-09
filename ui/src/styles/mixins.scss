@@ -1,0 +1,98 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+@mixin theme-vars($name) {
+  @each $token, $value in map.get($themes, $name) {
+    --#{$token}: #{$value};
+  }
+  color-scheme: $name;
+}
+
+@mixin respond-below($key) {
+  @media (max-width: map.get($breakpoints, $key)) {
+    @content;
+  }
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+@mixin stack($gap: $space-3) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin cluster($gap: $space-2) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+}
+
+@mixin surface($radius: $radius-lg) {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: $radius;
+  box-shadow: var(--shadow);
+}
+
+@mixin control {
+  height: $control-height;
+  padding: 0 $space-3;
+  border: 1px solid var(--border);
+  border-radius: $radius-md;
+  background: var(--surface);
+  min-width: 0;
+  @include focus-ring;
+}
+
+@mixin eyebrow {
+  font-size: $font-size-sm;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+@mixin scroll-area {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+@mixin icon-tile($size) {
+  @include grid-center;
+  width: $size;
+  height: $size;
+}
+
+@mixin hover-fill {
+  transition: background $transition-fast;
+
+  &:hover:not(:disabled) {
+    background: var(--surface-2);
+  }
+}
