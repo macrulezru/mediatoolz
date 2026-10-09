@@ -30,8 +30,8 @@ and lives in its own package since devtoolz 0.5.0.
   sync: `--cache` skips unchanged images, `--update --prune` merges into
   the existing file, `--check` fails with exit code 1 when it is stale
   (made for CI). `--dry-run` writes nothing and shows the result as a
-  table instead. Uses the native `sharp` library, which mediatoolz
-  offers to install on first use — see Requirements.
+  table instead. Uses the native `sharp` library, which comes
+  with the package — see Requirements.
 - **`image-batch`** — produces resized, converted and recompressed versions
   of raster images in bulk, by rules kept in a reusable **config** or given
   as flags: `widths`, `heights`, `size`, `longEdge` / `shortEdge` (the same for
@@ -87,13 +87,13 @@ supports `--json` for machine-readable output.
 ## Requirements
 
 - Node.js 20+
-- The [`sharp`](https://sharp.pixelplumbing.com) image library. It ships
-  prebuilt binaries for the common platforms and is not installed with
-  mediatoolz — the first run of either command offers to install it into
-  `~/.mediatoolz/deps` (`-y` / `--yes` agrees up front, which is also what
-  you want in CI; without a terminal and without `--yes` the command stops
-  and says so). A `sharp` you already have installed alongside mediatoolz
-  is used as-is.
+- The [`sharp`](https://sharp.pixelplumbing.com) image library comes with
+  the package: npm picks its prebuilt binary for your platform during the
+  install, so there is nothing to set up. Only if that binary is missing
+  (an install with `--omit=optional`, an unsupported platform) does the
+  first run offer to install `sharp` into `~/.mediatoolz/deps` (`-y` /
+  `--yes` agrees up front, which is also what you want in CI; without a
+  terminal and without `--yes` the command stops and says so).
 
 ## Installation
 
