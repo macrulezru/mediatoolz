@@ -1,0 +1,94 @@
+$font-sans:
+  system-ui,
+  -apple-system,
+  'Segoe UI',
+  Roboto,
+  sans-serif;
+$font-mono: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace;
+
+$font-size-xs: 11px;
+$font-size-sm: 12px;
+$font-size-base: 14px;
+$font-size-md: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 26px;
+
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 20px;
+$space-6: 24px;
+$space-7: 32px;
+$space-8: 48px;
+
+$radius-sm: 6px;
+$radius-md: 9px;
+$radius-lg: 12px;
+$radius-pill: 999px;
+
+$control-height: 36px;
+$control-height-sm: 28px;
+
+$sidebar-width: 236px;
+
+$transition-fast: 0.15s;
+
+$z-overlay: 20;
+
+$breakpoints: (
+  sm: 560px,
+  md: 760px,
+  lg: 1100px,
+);
+
+$themes: (
+  light: (
+    bg: #f5f6fa,
+    surface: #ffffff,
+    surface-2: #f0f2f8,
+    border: #dde1ec,
+    text: #1b1f2e,
+    muted: #667089,
+    accent: #496cff,
+    accent-ink: #ffffff,
+    accent-soft: #e8edff,
+    danger: #c93c3c,
+    danger-soft: #fdeaea,
+    warn: #8a5a00,
+    warn-soft: #fff4dd,
+    ok: #1f8f55,
+    backdrop: rgba(20, 28, 60, 0.45),
+    shadow: (
+      0 1px 2px rgba(20, 28, 60, 0.06),
+      0 6px 20px rgba(20, 28, 60, 0.05),
+    ),
+    shadow-lg: (
+      0 10px 40px rgba(20, 28, 60, 0.25),
+    ),
+  ),
+  dark: (
+    bg: #0f1220,
+    surface: #171b2d,
+    surface-2: #1e233a,
+    border: #2b3150,
+    text: #e6e9f5,
+    muted: #94a0c4,
+    accent: #7b93ff,
+    accent-ink: #0c1130,
+    accent-soft: #232c55,
+    danger: #ff7b7b,
+    danger-soft: #3a1f26,
+    warn: #f3c969,
+    warn-soft: #3a3118,
+    ok: #55d08c,
+    backdrop: rgba(5, 8, 20, 0.65),
+    shadow: (
+      0 1px 2px rgba(0, 0, 0, 0.3),
+      0 8px 24px rgba(0, 0, 0, 0.25),
+    ),
+    shadow-lg: (
+      0 12px 48px rgba(0, 0, 0, 0.55),
+    ),
+  ),
+);
