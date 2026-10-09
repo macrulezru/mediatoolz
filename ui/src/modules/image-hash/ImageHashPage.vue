@@ -208,8 +208,8 @@ onBeforeUnmount(() => {
     </header>
 
     <div v-if="options && !options.sharp" class="notice notice--warn">
-      The sharp image library is not installed yet. Previews are limited, and the first run will
-      offer to install it.
+      The sharp image library could not be loaded. Previews are limited, and the first run will
+      offer to install it again.
     </div>
 
     <SourcePicker

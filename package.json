@@ -1,6 +1,6 @@
 {
   "name": "@macrulez/mediatoolz",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A small toolbox of CLI commands for images — resize, convert and recompress them in bulk by rules, and generate hazehash, blurhash and thumbhash placeholders",
   "type": "module",
   "license": "MIT",
@@ -59,6 +59,7 @@
     "commander": "^13.1.0",
     "hazehash": "^0.1.1",
     "ignore": "^6.0.2",
+    "sharp": "^0.35.5",
     "thumbhash": "^0.1.1"
   },
   "devDependencies": {
@@ -71,7 +72,6 @@
     "globals": "^17.13.0",
     "prettier": "^3.9.8",
     "sass": "^1.105.1",
-    "sharp": "^0.35.5",
     "shiki": "^4.5.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
